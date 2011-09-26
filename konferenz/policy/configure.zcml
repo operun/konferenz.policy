@@ -1,0 +1,32 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="konferenz.policy">
+
+  <five:registerPackage package="." initialize=".initialize" />
+  
+  <!-- <i18n:registerTranslations directory="locales" /> -->
+  
+  <!-- <include package="konferenz.content" /> -->
+  <include package="konferenz.theme" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Plone Konferenz Policy"
+      directory="profiles/default"
+      description="Installs the konferenz.policy package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+      
+  <!--
+  <genericsetup:importStep
+      name="konferenz.policy.various"
+      title="Konferenz Policy Package: miscellaneous import steps"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="konferenz.policy.setuphandlers.setupVarious">
+  </genericsetup:importStep>
+  -->  
+  
+</configure>
