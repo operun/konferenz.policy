@@ -9,7 +9,7 @@
   
   <!-- <i18n:registerTranslations directory="locales" /> -->
   
-  <!-- <include package="konferenz.content" /> -->
+  <include package="konferenz.content" />
   <include package="konferenz.theme" />
 
   <genericsetup:registerProfile
